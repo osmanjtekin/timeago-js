@@ -1,0 +1,1 @@
+export {it_IT} from "./lang/it-IT.js";
