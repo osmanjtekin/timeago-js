@@ -32,7 +32,7 @@ const en_US=[
 
 /*
  * A given period of time starts at "x" seconds and ends at "y" seconds.
- * A second last 1 second. An our 3600, a day 86400 and so on.
+ * A second starts 1 second. An hour at 3600, a day at 86400 and so on.
  *
  * With that in mind, we iterate over SECONDS_IN_TIME to find 
  * the matching period of time.
