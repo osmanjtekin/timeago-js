@@ -1,6 +1,6 @@
 # timeago-js
 
-**timeago-js** is a small (<1 kb) Javascript utility used to automatically update date elements with user friendly statements (just now, n seconds ago etc.). 
+> **timeago-js** is a small (<1 kb) Javascript utility used to automatically update date elements with user friendly statements (just now, n seconds ago etc.). 
 
 It supports different languages.
 
