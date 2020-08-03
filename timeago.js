@@ -1,4 +1,4 @@
-import * as languages from "./load-lang.js";
+import * as languages from "./languages.js";
 
 export {timeago};
 
@@ -30,7 +30,21 @@ const en_US=[
 
 
 
-
+/*
+ * A given period of time starts at "x" seconds and ends at "y" seconds.
+ * A second last 1 second. An our 3600, a day 86400 and so on.
+ *
+ * With that in mind, we iterate over SECONDS_IN_TIME to find 
+ * the matching period of time.
+ *
+ * We divide the difference <diff> by the seconds in that period of time.
+ * That way we find the amount of "units" (seconds, minutes etc.) elapsed.
+ *
+ * We prepend the amount of <time_elapsed> to <lang> values if plural, 
+ * or leave as is otherwise.
+ *
+ * If <time_elapsed> is greater than 2 we return the plural value,
+ */
 function convert(el, timestamp, lang) {
 
   let now = Math.floor(new Date / 1000);
@@ -54,7 +68,10 @@ function convert(el, timestamp, lang) {
 
 
 
-
+/*
+ * For every <el>ement in the page we set its value formatted
+ * with the function above and <update_every> second(s).
+ */
 function timeago(el, update_every=1, lang) {
   let time_elements = document.querySelectorAll("."+el);
 
