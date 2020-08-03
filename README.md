@@ -14,7 +14,7 @@ It supports different languages.
 
 Calling `timeago()` by default:
 - targets all elements with `time` class
-- gets the timestamp value (in ms) from `data-timestamp` attribute
+- gets the timestamp value (in seconds) from `data-timestamp` attribute
 - sets the refresh rate to 30 seconds
 - sets the language to English
 
