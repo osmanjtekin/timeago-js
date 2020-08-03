@@ -72,7 +72,7 @@ function convert(el, timestamp, lang) {
  * For every <el>ement in the page we set its value formatted
  * with the function above and <update_every> second(s).
  */
-function timeago(el, update_every=30, lang) {
+function timeago(el="time", update_every=30, lang) {
   let time_elements = document.querySelectorAll("."+el);
 
   time_elements.forEach(el =>
