@@ -17,7 +17,9 @@ const SECONDS_IN_TIME = [
 
 
 
-
+/*
+ * The language array to which <convert> defaults.
+ */
 const en_US=[
   "just now",     "seconds ago",
   "a minute ago", "minutes ago",
@@ -32,9 +34,9 @@ const en_US=[
 
 /*
  * A given period of time starts at "x" seconds and ends at "y" seconds.
- * A second starts 1 second, an hour at 3600, a day at 86400 and so on.
+ * A second starts at 1 second, an hour at 3600, a day at 86400 and so on.
  *
- * With that in mind, we iterate over SECONDS_IN_TIME to find 
+ * With that in mind, we iterate over <SECONDS_IN_TIME> to find 
  * the matching period of time.
  *
  * We divide the difference <diff> by the seconds in that period of time.
@@ -79,6 +81,11 @@ function timeago(el="time", update_every=30, lang) {
     el.innerHTML = convert(el, el.dataset.timestamp, lang)
   )
 
+  /*
+   * Recursive setTimeout call to timeago to execute the first time
+   * and then every n seconds, where n = <update_every>.
+   *
+   */
   setTimeout( () => 
     timeago(el, (update_every),lang), 
     update_every * 1000);
