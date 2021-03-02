@@ -6,7 +6,7 @@ It supports different languages.
 
 ## How to install
 
-1. `git clone https://github.com/osmanjtekin/timeago-js.git` where your HTML page can access it.
+1. `git clone https://github.com/osmanjtekin/timeago-js.git`
 
 2. Add `type="module"` to the script tag, and `import {timeago} from "./helpers/timeago-js/timeago.js"` to the js file.
 
